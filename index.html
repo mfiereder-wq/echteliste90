@@ -4,28 +4,25 @@
 <meta charset="utf-8">
 <title>EchteListe™ 90 – Von 0 zu 1.000 Abonnenten in 90 Tagen</title>
 
-<!-- Favicon (SVG für maximale Kompatibilität und Speed) -->
+<!-- Favicon (SVG) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23007bff'/><path d='M30 35h40M30 50h40M30 65h25' stroke='white' stroke-width='8' stroke-linecap='round'/><circle cx='70' cy='65' r='10' fill='%23f6ad55'/></svg>">
 
 <!-- SEO Meta-Tags -->
-<meta name="description" content="Baue deine E-Mail-Liste auf: Von 0 zu 1.000 Abonnenten in nur 90 Tagen. Entdecke das EchteListe™ 90 System für nachhaltigen Online-Erfolg und Unabhängigkeit.">
+<meta name="description" content="Baue deine E-Mail-Liste auf: Von 0 zu 1.000 Abonnenten in nur 90 Tagen. Entdecke das EchteListe™ 90 System für nachhaltigen Online-Erfolg.">
 <meta name="keywords" content="E-Mail Marketing, Listenaufbau, Online Business, Leadmagnet, Landing Page, Abonnenten gewinnen, EchteListe 90, WildWave Marketing">
 <meta name="author" content="WildWave Marketing">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph / Social Media Meta-Tags -->
+<!-- Open Graph -->
 <meta property="og:title" content="EchteListe™ 90 – In 90 Tagen zu 1.000 Abonnenten">
 <meta property="og:description" content="Das Schritt-für-Schritt-System für eine profitable E-Mail-Liste. Starte jetzt deinen Listenaufbau!">
 <meta property="og:image" content="https://i.ibb.co/xtHfs84C/1771755474227-2.jpg">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="de_CH">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-<!-- Lottie Framework für die Animationen -->
 <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
-<!-- Stripe Buy Button Script -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
 <style>
@@ -81,9 +78,7 @@
     border: 1px solid rgba(255,255,255,0.1);
   }
 
-  section {
-    padding: 3rem 0;
-  }
+  section { padding: 3rem 0; }
 
   h2 {
     font-size: 2rem;
@@ -94,34 +89,39 @@
     margin-bottom: 1.5rem;
   }
 
-  p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+  .course-preview-container {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 2rem 0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-  }
-
-  ul li {
-    padding: 0.5rem 0;
-    font-size: 1.1rem;
+  .preview-header {
+    background: #edf2f7;
+    padding: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid var(--border);
   }
 
-  ul li:last-child { border-bottom: none; }
+  .preview-iframe-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 58.5%; /* Google Slides 16:9 Verhältnis */
+    background: #000;
+  }
 
-  .animation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5rem 0;
-    background: var(--white);
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  .preview-iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 
   .features {
@@ -130,50 +130,6 @@
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     border: 1px solid var(--border);
-  }
-
-  .features h3 {
-    color: var(--primary);
-    margin-top: 2rem;
-    font-size: 1.4rem;
-    border-bottom: 2px solid var(--light-bg);
-    padding-bottom: 0.5rem;
-  }
-
-  .features h3:first-child { margin-top: 0; }
-
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  .testimonial-card {
-    background: var(--white);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-  }
-
-  .stars {
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  .testimonial-text {
-    font-style: italic;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: var(--text-main);
-  }
-
-  .testimonial-author {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--dark);
   }
 
   .price-card {
@@ -185,23 +141,12 @@
     margin: 3rem 0;
   }
 
-  .price {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .price span {
-    font-size: 2.5rem;
-    color: var(--white);
-    display: inline-block;
-    margin-top: 0.5rem;
-  }
+  .price span { font-size: 2.5rem; color: var(--white); display: inline-block; }
 
   .stripe-button-wrapper {
     margin: 2rem 0;
     display: flex;
     justify-content: center;
-    min-height: 44px;
   }
 
   footer {
@@ -209,37 +154,11 @@
     padding: 4rem 0;
     background: #edf2f7;
     color: #4a5568;
-    border-top: 1px solid var(--border);
-  }
-
-  .footer-content {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .impressum {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #cbd5e0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .impressum p {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-
-  footer a {
-    color: var(--primary);
-    text-decoration: none;
   }
 
   @media (max-width: 600px) {
     h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
     .price span { font-size: 1.8rem; }
-    dotlottie-wc { width: 250px !important; height: 250px !important; }
   }
 </style>
 </head>
@@ -254,102 +173,38 @@
 
 <div class="container">
   <section>
-    <p>Du kennst das Gefühl…</p>
-    <ul>
-      <li>❌ Jedes Mal wenn du etwas verkaufen willst, musst du „kalt“ werben</li>
-      <li>❌ Du postest auf Social Media und hörst… Nichts</li>
-      <li>❌ Du zahlst für teure Ads, aber niemand kauft</li>
-      <li>❌ Du fühlst dich abhängig von Facebook‑Algorithmen</li>
-    </ul>
-
-    <h2>Stell dir vor…</h2>
-    <ul>
-      <li>✅ Jeden Monat verlässlich neue Kunden aus deiner Liste</li>
-      <li>✅ Verkäufe während du schläfst (Automatisierung!)</li>
-      <li>✅ Unabhängigkeit von Social‑Media‑Plattformen</li>
-      <li>✅ Eine Community, die dir vertraut und kauft</li>
-    </ul>
+    <h2>Deine Vorlagen & Kursübersicht</h2>
+    <p>Schau dir hier die exklusive Übersicht der Module und Vorlagen an, die du direkt nach dem Kauf erhältst:</p>
+    
+    <div class="course-preview-container">
+      <div class="preview-header">
+        <span>Präsentation: Modulübersicht & Templates</span>
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vRDHr6u8ROSTBuRJ6bYciPEakXOrI-x5z0QGg6AZiRk0nk6JndSGqWg-VN23Lnj9A/pub" target="_blank" style="font-size: 0.8rem; color: var(--primary); text-decoration: none;">Vollbild öffnen ↗</a>
+      </div>
+      <div class="preview-iframe-wrapper">
+        <!-- Google Slides Einbettung -->
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRDHr6u8ROSTBuRJ6bYciPEakXOrI-x5z0QGg6AZiRk0nk6JndSGqWg-VN23Lnj9A/pubembed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>Das ist EchteListe™ 90</h2>
-    <p>Kein Theory‑Padding. Kein „einfach posten und hoffen“. <strong>Ein Schritt‑für‑Schritt‑System, das funktioniert:</strong></p>
-
-    <div class="animation-container">
-      <dotlottie-wc src="https://lottie.host/febe9e7d-7e75-45db-867f-d5f67c58a76d/EaGCvnyeXI.lottie" style="width: 300px; height: 300px" autoplay loop></dotlottie-wc>
-    </div>
-
+    <h2>Was du lernst</h2>
     <div class="features">
-      <h3>Modul 1: Die Nische (Woche 1‑2)</h3>
+      <h3>Inhalte im Detail</h3>
       <ul>
-        <li>Wie du NICHT zu breit und nicht zu eng wählst</li>
-        <li>Deine Positionierungs‑Formel</li>
+        <li>✅ <strong>Modul 1:</strong> Nische & Positionierung</li>
+        <li>✅ <strong>Modul 2:</strong> Dein unwiderstehlicher Leadmagnet</li>
+        <li>✅ <strong>Modul 3:</strong> Die Landing-Page-Conversion-Maschine</li>
+        <li>✅ <strong>Modul 4:</strong> Skalierung auf 1.000+ Abonnenten</li>
+        <li>🎁 <strong>Bonus:</strong> 10 E-Mail-Vorlagen & Copy-Scripts</li>
       </ul>
-
-      <h3>Modul 2: Der Leadmagnet (Woche 3‑4)</h3>
-      <ul>
-        <li>Dein unwiderstehliches „Hier‑meine‑Mail“-Angebot</li>
-        <li>In 3 Stunden mit Canva (kostenlos)</li>
-      </ul>
-
-      <h3>Modul 3: Die Landing Page (Woche 5‑8)</h3>
-      <ul>
-        <li>Deine Konversionsmaschine</li>
-        <li>Erste 100 Abonnenten strategisch</li>
-      </ul>
-
-      <h3>Modul 4: Die Skalierung (Woche 9‑12)</h3>
-      <ul>
-        <li>Von 100 zu 1.000+ Abonnenten</li>
-        <li>Organisch und mit bezahlbaren Ads</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Was du bekommst</h2>
-    <div class="animation-container">
-      <dotlottie-wc src="https://lottie.host/6fdf53aa-1e6a-44cf-92aa-df22c5f0f76d/94bS5YZB3E.lottie" style="width: 300px; height: 300px" autoplay loop></dotlottie-wc>
-    </div>
-    <ul>
-      <li>✅ 4 detaillierte Module (PDFs + Video‑Scripts)</li>
-      <li>✅ 10 E‑Mail‑Templates (Copy‑Paste)</li>
-      <li>✅ Canva‑Vorlagen für deinen Leadmagnet</li>
-      <li>✅ Landing‑Page‑Copy‑Templates</li>
-      <li>✅ Die 90‑Tage‑Checkliste</li>
-      <li>✅ Community‑Zugang</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Das sagen Teilnehmer</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Endlich ein Kurs, der hält, was er verspricht. Nach 60 Tagen hatte ich meine ersten 450 Abonnenten!"</p>
-        <p class="testimonial-author">— Markus S., Coach</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Die E-Mail-Templates sind Gold wert. Meine Öffnungsraten sind von 12% auf 35% gestiegen."</p>
-        <p class="testimonial-author">— Sarah L., Shop-Besitzerin</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Von Technik hatte ich keine Ahnung, aber mit der Anleitung war die Landing Page in 2 Stunden fertig."</p>
-        <p class="testimonial-author">— Thomas B., Berater</p>
-      </div>
     </div>
   </section>
 
   <div class="price-card">
-    <h2>Investition</h2>
-    <p class="price">
-      Einführungspreis: <span>CHF 97.- (Basis)</span><br>
-      Normalpreis: <span>CHF 197.-</span>
-    </p>
-    <p>30‑Tage‑Geld‑zurück‑Garantie. Ohne Fragen.</p>
-    
+    <h2>Starte jetzt deinen Listenaufbau</h2>
+    <p class="price">Einmalig <span>CHF 97.-</span></p>
     <div class="stripe-button-wrapper">
       <stripe-buy-button
         buy-button-id="buy_btn_1T3aegAkT9oDvu1ecE20Bi6w"
@@ -357,21 +212,13 @@
       >
       </stripe-buy-button>
     </div>
-    
-    <h2 style="border:none; color:white; font-size: 1.5rem; margin-top: 1rem;">Jetzt loslegen</h2>
   </div>
 </div>
 
 <footer>
-  <div class="container footer-content">
-    <p>Fragen? <a href="mailto:info@wildwave.ch">info@wildwave.ch</a></p>
-    <div class="impressum">
-      <p><strong>Impressum</strong></p>
-      <p>WildWave Marketing</p>
-      <p>Im Isengrind 35</p>
-      <p>8046 Zürich</p>
-      <p>Schweiz</p>
-    </div>
+  <div class="container">
+    <p>WildWave Marketing | Zürich, Schweiz</p>
+    <p><a href="mailto:info@wildwave.ch">info@wildwave.ch</a></p>
   </div>
 </footer>
 
